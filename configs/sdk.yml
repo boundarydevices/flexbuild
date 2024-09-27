@@ -59,7 +59,7 @@ BUILD:
 # default kernel config list
 KERNEL_CONFIG:
   ARM64_LS:  "defconfig lsdk.config"
-  ARM64_IMX: "defconfig imx.config imx_v8_defconfig"
+  ARM64_IMX: "ezurio_defconfig"
   ARM32_LS:  "multi_v7_defconfig multi_v7_lpae.config lsdk.config"
   ARM32_IMX: "imx_v7_defconfig"
 
@@ -138,8 +138,8 @@ repo:
 
 # kernel and modules git repositories
   linux:
-    url:  https://github.com/nxp-imx/linux-imx.git
-    tag:  lf-6.6.3-1.0.0
+    url:  https://github.com/boundarydevices/linux.git
+    tag: ezurio-lf-6.6.y
 
   cryptodev_linux:
     url:  https://github.com/cryptodev-linux/cryptodev-linux.git
@@ -155,7 +155,6 @@ repo:
 
   isp_vvcam_module:
     url:  https://github.com/nxp-imx/isp-vvcam.git
-
 
 # networking component repositories
   restool:
