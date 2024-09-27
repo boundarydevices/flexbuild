@@ -156,6 +156,10 @@ repo:
   isp_vvcam_module:
     url:  https://github.com/nxp-imx/isp-vvcam.git
 
+  kernel_module_imx_gpu_viv:
+    url:  https://github.com/Freescale/kernel-module-imx-gpu-viv.git
+    commit: 2fbba44f32bda51
+
 # networking component repositories
   restool:
     url:  https://github.com/nxp-qoriq/restool.git
