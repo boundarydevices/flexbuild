@@ -130,6 +130,9 @@ repo:
     url:  https://github.com/NXP/imx-firmware.git
     # firmware for wifi/bt
 
+  if573_sdio_firmware_tar:
+    url: https://github.com/LairdCP/Sterling-LWB-and-LWB5-Release-Packages/releases/download/LRD-REL-12.29.0.22/summit-if573-sdio-firmware-12.29.0.22.tar.bz2
+
   fw_ele_bin:
     url:  https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-ele-imx-0.1.1.bin
 
