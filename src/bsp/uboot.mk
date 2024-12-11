@@ -28,8 +28,9 @@ uboot u-boot:
 	 for cfg in $$uboot_cfg; do \
 	     $(call build-uboot-target,$$cfg) \
 	 done
-
-
+	 cd $(PKGDIR)/bsp/uboot  && \
+	 mkdir -p $(FBOUTDIR)/bsp/u-boot && \
+	 mkimage -A arm64 -O linux -T script -C none -a 0 -e 0  -n "boot.scr" -d $(BSPDIR)/uboot/board/boundary/bootscripts/bootscript-debian.txt  $(FBOUTDIR)/bsp/u-boot/boot.scr;
 
 define build-uboot-target
 	if echo $1 | grep -qE 'ls1021a|^mx'; then \
