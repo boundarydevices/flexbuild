@@ -161,6 +161,9 @@ repo:
     url:  https://github.com/Freescale/kernel-module-imx-gpu-viv.git
     commit: 2fbba44f32bda51
 
+  kernel_module_bdsdmac_backports_tar:
+    url:  https://github.com/LairdCP/BDSDMAC-Release-Packages/releases/download/LRD-REL-12.29.0.22/summit-backports-12.29.0.22.tar.bz2
+
 # networking component repositories
   restool:
     url:  https://github.com/nxp-qoriq/restool.git
