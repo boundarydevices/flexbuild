@@ -19,3 +19,4 @@ include lttng_modules.mk
 include mdio_proxy_module.mk
 include isp_vvcam_module.mk
 include kernel_module_imx_gpu_viv.mk
+include kernel_module_bdsdmac_backports.mk
