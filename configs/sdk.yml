@@ -77,7 +77,8 @@ repo:
     url:  https://github.com/nxp-qoriq/atf.git
 
   uboot:
-    url:  https://github.com/nxp-qoriq/u-boot.git
+    url:  https://github.com/boundarydevices/u-boot.git
+    tag:  14332558e237afb
 
   rcw:
     url:  https://github.com/nxp-qoriq/rcw.git
