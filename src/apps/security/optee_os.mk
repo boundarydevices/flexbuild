@@ -34,6 +34,12 @@ optee_os:
 	elif [ $(SOCFAMILY) = IMX ]; then \
 		 if [ $(MACHINE) = qemuarm64 -o $(MACHINE) = all ]; then \
 		     brd=mx8mpevk; \
+		 elif [ $(MACHINE) = nitrogen8mm ]; then \
+		     brd=mx8mmevk; \
+		 elif [ $(MACHINE) = nitrogen8mp ]; then \
+		     brd=mx8mpevk; \
+		 elif [ $(MACHINE) = nitrogen93 ]; then \
+		     brd=mx93evk; \
 		 else \
 		     brd=$${MACHINE:1}; \
 		 fi && \
