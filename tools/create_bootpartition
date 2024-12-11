@@ -52,8 +52,10 @@ generate_bootpartition_tarball() {
 	[ ! -d $FBOUTDIR/bsp/imx_mcore_demos/imx93-m33-demo ] && bld mcore_demo -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
 	[ ! -d $DESTDIR/usr/lib/ethosu_firmware ] && bld ethosu_firmware -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
 	[ ! -d $FBOUTDIR/bsp/if573_sdio_firmware/lib/firmware/cypress ] && bld if573_sdio_firmware -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
+	[ ! -d $FBOUTDIR/bsp/lwb5plus_sdio_sa_firmware/lib/firmware/brcm ] && bld lwb5plus_sdio_sa_firmware -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
 
 	cp -Prf $FBOUTDIR/bsp/if573_sdio_firmware/lib/firmware/* $bootpartdir/firmware
+	cp -Prf $FBOUTDIR/bsp/lwb5plus_sdio_sa_firmware/lib/firmware/* $bootpartdir/firmware
 	cp -Prf $FBOUTDIR/bsp/imx_firmware/lib/firmware/* $bootpartdir/firmware
 	cp -Prf $FBOUTDIR/bsp/imx_mcore_demos/imx93-m33-demo/imx93-*m33*.elf $DESTDIR/usr/lib/ethosu_firmware $bootpartdir/firmware
      fi
