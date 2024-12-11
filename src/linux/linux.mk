@@ -63,7 +63,7 @@ linux:
 
 
 
-linux-modules: nxp_wlan_bt cryptodev_linux mdio_proxy_module isp_vvcam_module
+linux-modules: nxp_wlan_bt cryptodev_linux mdio_proxy_module isp_vvcam_module kernel_module_imx_gpu_viv
 	 $(call fbprint_d,"linux-modules")
 
 
