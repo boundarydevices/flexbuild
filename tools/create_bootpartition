@@ -53,7 +53,9 @@ generate_bootpartition_tarball() {
 	[ ! -d $DESTDIR/usr/lib/ethosu_firmware ] && bld ethosu_firmware -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
 	[ ! -d $FBOUTDIR/bsp/if573_sdio_firmware/lib/firmware/cypress ] && bld if573_sdio_firmware -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
 	[ ! -d $FBOUTDIR/bsp/lwb5plus_sdio_sa_firmware/lib/firmware/brcm ] && bld lwb5plus_sdio_sa_firmware -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
+	[ ! -d $FBOUTDIR/apps/connectivity/wireless_regdb ] && bld wireless_regdb -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
 
+	cp -Prf $FBOUTDIR/apps/connectivity/wireless_regdb/regulatory.db* $bootpartdir/firmware
 	cp -Prf $FBOUTDIR/bsp/if573_sdio_firmware/lib/firmware/* $bootpartdir/firmware
 	cp -Prf $FBOUTDIR/bsp/lwb5plus_sdio_sa_firmware/lib/firmware/* $bootpartdir/firmware
 	cp -Prf $FBOUTDIR/bsp/imx_firmware/lib/firmware/* $bootpartdir/firmware
