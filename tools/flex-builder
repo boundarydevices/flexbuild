@@ -549,9 +549,9 @@ flex_auto_build() {
 
     bld linux -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
     bld linux-modules -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
+    bld uboot -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
     bld itb -r poky:tiny -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
     [ $DESTARCH = arm64 ] && bld perf -p $SOCFAMILY -f $CFGLISTYML
-    bld distroscr -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
     bld bspall -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
     bld secure_obj -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
     bld boot -a $DESTARCH -p $SOCFAMILY -f $CFGLISTYML
